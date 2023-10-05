@@ -7,7 +7,7 @@ ids = {
     if line[:4] == "/dev"
 }
 
-with open("./fstab_test", "r+") as fstab:
+with open("/etc/fstab", "r+") as fstab:
     text = fstab.read()
     for dev in ids:
         text = text.replace(dev, ids[dev])
